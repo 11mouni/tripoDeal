@@ -15,11 +15,8 @@ public class login_page extends base_pages {
     static By depart = By.xpath("//div[text()='Departure Date']");
 	static By depDate = By.xpath("//div[@class='css-1dbjc4n r-18u37iz']//div[@class='css-1dbjc4n r-14lw9ot r-11u4nky r-z2wwpe r-1phboty r-rs99b7 r-1loqt21 r-13awgt0 r-ymttw5 r-5njf8e r-1otgn73']//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']");
 	static By passenger = By.xpath("//div[normalize-space()='Passengers']");
-	//static By person = By.xpath("//div[@class='css-1dbjc4n r-k8qxaj r-d9fdf6']//div[1]//div[2]//div[3]");
-	static By drop_Adds = By.xpath("//div[text()='Add-ons']");
-	static By you = By.xpath("//div[text()='You-1st']");
 	
-	static By currency = By.xpath("//div[text()='Currency']");
+	
 	
 	
 	//Webelement
@@ -54,27 +51,8 @@ public class login_page extends base_pages {
 		
 	}
 	
-//	public static WebElement Person()
-//	{
-//		return driver.findElement(person);
-//	}
+
 	
-	public static WebElement add()
-	{
-		return driver.findElement(drop_Adds);
-		
-	}
-	
-	public static WebElement YOU()
-	{
-		return driver.findElement(you);
-	}
-	
-	public static WebElement Currency()
-	{
-		return driver.findElement(currency);
-		
-	}
 	
 	//action 
 	public static void giveFrom()
@@ -105,25 +83,17 @@ public class login_page extends base_pages {
 	public static void PassengeR()
 	{
 		Ppassenger().click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("windows.scrollBy(0,200)");
 	}
 	
-//	public static void PersoN()
+//	public static void scrolling()
 //	{
-//		
-//		Actions act = new Actions(driver);
-//		act.click(Person()).build().perform();
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("windows.scrollBy(0,200)");
 //	}
+//	
+
 	
-	public static void AddDrop()
-	{
-		Actions act = new Actions(driver);
-		act.click(YOU()).build().perform();
-	}
 	
-	public static void currenCY()
-	{
-		Currency().click();
-		Select dropcurrency = new Select(driver.findElement(currency));
-		dropcurrency.selectByVisibleText("USD");
-	}
 }

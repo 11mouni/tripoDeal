@@ -6,7 +6,7 @@ And Give to
 And to Scroll
 And Depature 
 And date select
-And pract drop
-And currency
-And driver close
+And passanger
+
+
 
