@@ -35,25 +35,14 @@ public class login_tC {
 	public void date_select() {
 		login_page.departDatE();
 	}
-
-//	@Given("Click Person")
-//	public void click_person() {
-//		login_page.PersoN();
-//	}
+    
+	@Given("passanger")
+	public void passanger() {
+		login_page.PassengeR();
+	}
+   
 	
-	@Given("pract drop")
-	public void pract_drop() {
-		login_page.AddDrop();
-	}
-
-	@Given("currency")
-	public void currency() {
-		login_page.currenCY();
-	}
-
-	@Given("driver close")
-	public void driver_close() {
-		base_pages.DriverClose();
-	}
+	
+	
 
 }
